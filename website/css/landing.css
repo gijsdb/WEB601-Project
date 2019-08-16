@@ -1,0 +1,33 @@
+.vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+.fullbg {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../img/bg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro {
+    height: 70vh;
+    color: #fff;
+}
+
+.frame2 {
+    height: 80vh;
+    background-color: green;
+}
+
+footer {
+    height: 4em;
+}
+
+.nav-item {
+    padding: 1em;
+}
