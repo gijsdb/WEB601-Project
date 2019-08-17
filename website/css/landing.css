@@ -3,7 +3,11 @@
     align-items: center;
     justify-content: center;
     flex-direction: row;
-  }
+}
+
+.tex-center {
+    text-align: center;
+}
 
 .fullbg {
     height: 100vh;
@@ -20,11 +24,20 @@
 }
 
 .frame2 {
-    height: 80vh;
+    padding: 2em;
+}
+
+.feature-list {
+    font-size: 1.25em;
+    color: grey;
+}
+
+.feature-list li {
+    margin: 5px 0 0 5px;
 }
 
 footer {
-    height: 4em;
+    padding: 2em;
     background-color: #1b1b1b;
 }
 
