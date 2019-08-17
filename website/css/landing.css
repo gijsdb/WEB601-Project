@@ -21,11 +21,11 @@
 
 .frame2 {
     height: 80vh;
-    background-color: green;
 }
 
 footer {
     height: 4em;
+    background-color: #1b1b1b;
 }
 
 .nav-item {
