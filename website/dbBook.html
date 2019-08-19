@@ -1,4 +1,4 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
@@ -9,13 +9,77 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
     </head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
+
+        <div class="container-fluid pr-0 pl-0">
+                <!-- NAV -->
+                <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+                        <a class="navbar-brand" href="#">App title</a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                          <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                          <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                              <a class="nav-link" href="#"><!--Home <span class="sr-only">(current)</span>--><img src="img/iconUser.png" class="nav-icon"> </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <img src="img/iconBook.png" class="nav-icon"> 
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                      <a class="dropdown-item" href="#">Read books</a>
+                                      <a class="dropdown-item" href="#">Add book</a>
+                                    </div>
+                                  </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#"><img src="img/iconFeed.png" class="nav-icon"></a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" href="#"><img src="img/iconLogOut.png" class="nav-icon"> </a>
+                            </li>
+                           
+                          </ul>
+                        </div>
+                </nav>
+                
+                <!-- CONTENT -->
+                <div class="container content">
+                    <div class="row">
+                        <div class="col">
+                            <h1>book title goes here - book author</h1>
+                            <img src="img/iconBack.png" class="back-icon ml-auto"></img>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="img/coverTemplate.png" class="book-cover"></img>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li>Your rating * * * * *</li>
+                                <li>You have x notes on this book</li>
+                                <li>
+                                    <button class="btn btn-outline-dark btn-lg hvr-grow" type="">Create new note</button>
+                                </li>
+                                <li>
+                                    <button class="btn btn-outline-dark btn-lg hvr-grow" type="">Delete book</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         
         <script src="" async defer></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
     </body>
 </html>
