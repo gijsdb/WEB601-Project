@@ -1,0 +1,30 @@
+body {
+    overflow-x: hidden;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.tex-center {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #F76300;
+}
+
+.content {
+    margin-top: 2em;
+    padding: 1em 0 1em 0;
+    color: grey;
+}
+
+.nav-icon {
+    width: 3em;
+    height: 3em;
+}
+
