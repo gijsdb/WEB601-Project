@@ -6,11 +6,12 @@ This repository contains all files for my WEB601 project
 - <b>Wireframes</b>
   <br>Contains screen designs, created using Adobe PhotoShop CS6
 - <b>Website</b>
-  <br>Contains all website files
+  <br>Contains templates of my website made with bootstrap
+- <b>react project</b>
+  <br>Contains my react application
 ---
 ## Using technologies 
 - <b>HTML, CSS</b>
-  - Bootstrap
 - <b>JavaScript</b>
   - Jquery
   - React
