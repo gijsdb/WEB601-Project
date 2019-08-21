@@ -6,7 +6,7 @@
     background: yellow;
 }
 
-.grid {
+.readBookGrid {
     /* Grid Fallback */
     display: flex;
     flex-wrap: wrap;

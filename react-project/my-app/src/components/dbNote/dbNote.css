@@ -1,0 +1,8 @@
+.noteContainer {
+    width: 90%;
+    margin-left: 5%;
+    padding-top: 4em;
+    padding-bottom: 3em;
+    background: yellow;
+    text-align: center;
+}

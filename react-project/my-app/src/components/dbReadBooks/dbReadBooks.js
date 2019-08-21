@@ -7,18 +7,18 @@ import './dbReadBooks.css';
 
 const DBReadBooks = () => { 
     return (
-        <div class="readContainer">
-           <div class="grid">
-                <div class="module">1</div>
-                <div class="module">2</div>
-                <div class="module">3</div>
-                <div class="module">4</div>
-                <div class="module">5</div>
-                <div class="module">6</div>
-                <div class="module">7</div>
-                <div class="module">8</div>
-                <div class="module">9</div>
-                <div class="module">10</div>
+        <div className="readContainer">
+           <div className="readBookGrid">
+                <div className="module">1</div>
+                <div className="module">2</div>
+                <div className="module">3</div>
+                <div className="module">4</div>
+                <div className="module">5</div>
+                <div className="module">6</div>
+                <div className="module">7</div>
+                <div className="module">8</div>
+                <div className="module">9</div>
+                <div className="module">10</div>
             </div>
         </div>
       )
