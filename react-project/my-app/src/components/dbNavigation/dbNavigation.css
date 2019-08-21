@@ -1,0 +1,25 @@
+.navContainer {
+    width: 100%;
+    height: 3em;
+    position: fixed;
+}
+
+nav {
+    background: #F76300;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.navList {
+    width: 100%;
+	padding: 0;
+    list-style: none;
+}
+
+.navList li {
+    float: right;
+    text-decoration: none;
+    margin: 0 1em 0 1em;
+    color: #fff;
+}
