@@ -1,0 +1,42 @@
+.homeContainer1 {
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+  
+}
+
+.homeContainer2 {
+    background-color: yellow;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 100vh;
+}
+
+.contentContainer {
+    background-color: white;
+    margin-left: 2em;
+    margin-right: 3em;
+    margin-top: 2em;
+}
+
+.homeNav {
+    width: 100%;
+    height: auto;
+    position: fixed;
+}
+
+.homeNavList {
+    width: 100%;
+	padding: 0;
+    list-style: none;
+}
+
+.homeNavList li {
+    float: right;
+    text-decoration: none;
+    margin: 0 1em 0 1em;
+    color: #fff;
+}

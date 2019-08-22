@@ -12,6 +12,7 @@ import DBAddBook from './components/dbAddBook/dbAddBook';
 import DBBook from './components/dbBook/dbBook';
 import DBNote from './components/dbNote/dbNote';
 import DBAddNote from './components/dbAddNote/dbAddNote';
+import Home from './components/home/home';
 
 const createBrowserHistory = require("history").createBrowserHistory;
 const history = createBrowserHistory();
@@ -21,7 +22,7 @@ function App() {
     <div>
       <BrowserRouter history={history}>
       <Switch>
-          {/*<Route path='/dashboardHome' component={ContentDBHome} /> */}
+          <Route path='/home' component={Home} />
                 <Layout>
                   <Switch>
                     <Route path='/dblanding' component={DBLanding} /> 
