@@ -13,8 +13,7 @@ This repository contains all files for my WEB601 project
 ## Using technologies 
 - <b>HTML, CSS</b>
 - <b>JavaScript</b>
-  - Jquery
   - React
   - Node
-    - Express
+    - Express (Not yet implemented)
   
