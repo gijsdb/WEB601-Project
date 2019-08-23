@@ -1,10 +1,11 @@
+/*
 .homeContainer1 {
     background-color: red;
     width: 100vw;
     height: 100vh;
     position: absolute;
     top: 0;
-  
+    z-index: 0;
 }
 
 .homeContainer2 {
@@ -13,19 +14,22 @@
     height: 100vh;
     position: absolute;
     top: 100vh;
+    z-index: 0;
 }
 
 .contentContainer {
     background-color: white;
     margin-left: 2em;
     margin-right: 3em;
-    margin-top: 2em;
+    margin-top: 4em;
+    z-index: 1;
 }
 
 .homeNav {
     width: 100%;
     height: auto;
     position: fixed;
+    z-index: 5;
 }
 
 .homeNavList {
@@ -39,4 +43,45 @@
     text-decoration: none;
     margin: 0 1em 0 1em;
     color: #fff;
+}
+
+.homeFooter {
+    position: absolute;
+    bottom: -100vh;
+    background: red;
+    width: 100%;
+    padding: 1em 0em 1em 0em;
+    text-align: center;
+}
+*/
+
+.homeContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: yellow;
+}
+
+.homeNav {
+    flex-grow: 1;
+    width: 100%;
+    padding: 1.5em 0em 1.5em 0em;
+    background-color: red;
+}
+
+.fullBg {
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url('../../img/bg.jpg')
+}
+
+.homeContent {
+    background-color: pink;
+    padding: 2em 0em;
+    flex-grow: 1;
+    width: 100;
+    align-self: center;
 }

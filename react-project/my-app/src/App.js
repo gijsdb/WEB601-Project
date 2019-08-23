@@ -1,10 +1,6 @@
 import React from 'react';
 import './App.css';
 import Layout from './components/layout/layout'
-/*  
-import ContentDBBooks from './components/contentDBBooks/contentDBBooks'
-import ContentDBHome from './components/contentDBHome/contentDBHome'
-*/
 import {BrowserRouter,Route,Link, Switch} from 'react-router-dom'
 import DBLanding from './components/dbLanding/dbLanding';
 import DBReadBooks from './components/dbReadBooks/dbReadBooks';
@@ -31,7 +27,7 @@ function App() {
                     <Route path='/dbbook' component={DBBook} />
                     <Route path='/dbnote' component={DBNote} />
                     <Route path='/dbaddnote' component={DBAddNote} />
-                   {/*<Route component={NotFound} status={404} />*/}
+                   {/*<Route path={NotFound} component={NotFound} status={404} />*/}
                   </Switch>
                 </Layout> 
         </Switch>

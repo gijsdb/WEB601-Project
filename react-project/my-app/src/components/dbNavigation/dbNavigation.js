@@ -8,7 +8,7 @@ import './dbNavigation.css';
 const DBNavigation = () => { 
     return (
     <div className="navContainer">
-        <nav>
+        <nav className="dbNav">
             <ul className="navList">
                 <li>Log out</li>
                 <li>Read Books</li>

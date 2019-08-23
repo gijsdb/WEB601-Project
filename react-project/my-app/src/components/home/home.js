@@ -8,6 +8,7 @@ import './home.css';
 const Home = () => { 
     return (
     <div>
+        {/* NO FLEXBOX
         <div className="homeContainer1">
             <nav className="homeNav">
                 <ul className="homeNavList">
@@ -24,6 +25,26 @@ const Home = () => {
                 <h1>testing</h1>
             </div>
         </div>
+        <footer className="homeFooter">
+            <p>footer</p>
+        </footer>
+        */}
+        {/*  WITH FLEXBOX  */}
+        <div className="fullBg">
+            <div className="homeContainer">
+            
+                <nav className="homeNav">
+                    <h1>header</h1>
+                </nav>
+                <div className="homeContent">
+                    <h2>content</h2>
+
+                </div>
+            </div>
+        </div>   
+            <div className="frame2">
+            
+            </div> 
     </div>
       )
 
