@@ -29,12 +29,16 @@ const Home = () => {
             <p>footer</p>
         </footer>
         */}
-        {/*  WITH FLEXBOX  */}
+        {/*  WITH CSS grids */}
         <div className="fullBg">
             <div className="homeContainer">
-            
                 <nav className="homeNav">
-                    <h1>header</h1>
+                    <div class="homeNavCol">
+                        <h1>left</h1>
+                    </div>
+                    <div class="homeNavCol">
+                        <h1>right</h1>
+                    </div>
                 </nav>
                 <div className="homeContent">
                     <h2>content</h2>
@@ -42,7 +46,7 @@ const Home = () => {
                 </div>
             </div>
         </div>   
-            <div className="frame2">
+            <div className="homeFrame2">
             
             </div> 
     </div>

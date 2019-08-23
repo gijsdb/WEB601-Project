@@ -56,18 +56,43 @@
 */
 
 .homeContainer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    background-color: yellow;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4em;
+    grid-gap: 5px;
+    height: 100vh;
 }
 
 .homeNav {
-    flex-grow: 1;
-    width: 100%;
     padding: 1.5em 0em 1.5em 0em;
     background-color: red;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-self: center
+}
+
+.homeNavCol {
+    background-color: pink;
+}
+
+.homeContent {
+    background-color: pink;
+    padding: 2em 0em 2em 0em;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin-top: 10em;
+    text-align: center;
+}
+
+.homeFrame2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 4em 4em 4em;
+    grid-gap: 5px;
+    height: 100vh;
+    background-color: green;
 }
 
 .fullBg {
@@ -76,12 +101,4 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-image: url('../../img/bg.jpg')
-}
-
-.homeContent {
-    background-color: pink;
-    padding: 2em 0em;
-    flex-grow: 1;
-    width: 100;
-    align-self: center;
 }
