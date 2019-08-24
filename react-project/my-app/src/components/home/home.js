@@ -8,47 +8,34 @@ import './home.css';
 const Home = () => { 
     return (
     <div>
-        {/* NO FLEXBOX
-        <div className="homeContainer1">
-            <nav className="homeNav">
-                <ul className="homeNavList">
-                    <li>Log in</li>
-                    <li>Register</li>
-                </ul>
-            </nav>
-        <div className="contentContainer">
-                <h1>testing</h1>
-        </div>
-        </div>
-        <div className="homeContainer2">
-            <div className="contentContainer">
-                <h1>testing</h1>
-            </div>
-        </div>
-        <footer className="homeFooter">
-            <p>footer</p>
-        </footer>
-        */}
-        {/*  WITH CSS grids */}
-        <div className="fullBg">
-            <div className="homeContainer">
-                <nav className="homeNav">
-                    <div class="homeNavCol">
-                        <h1>left</h1>
-                    </div>
-                    <div class="homeNavCol">
-                        <h1>right</h1>
-                    </div>
-                </nav>
-                <div className="homeContent">
-                    <h2>content</h2>
+        <div class="fullBg">
+            <div class="homeContainer1">
+                <div className="homeNav">
 
+                        <button className="navBtn">Log in</button>
+                        <button className="navBtn">Register</button>
+                </div>
+                <div className="homeIntro">
+                    <h1>BookNote</h1>
+                    <h2>An easy way to store and manage notes on books you've read</h2>
+                    <button className="actionBtn">
+                        Learn more
+                    </button>
+                </div>
+                </div>
+                <div class="homeFeatureList">
+                    <div class="list">
+                        <span className="featureTitle">Feature list</span>
+                        <ul>
+                            <li>- Add books you've read to a catalog</li>
+                            <li>- Add notes on specific books using a rich text editor</li>
+                            <li>- Manage notes you've read</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-        </div>   
-            <div className="homeFrame2">
-            
-            </div> 
+
+        
     </div>
       )
 
