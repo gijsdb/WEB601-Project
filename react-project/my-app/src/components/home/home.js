@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './home.css';
-
+import { Link } from 'react-router-dom'
 
 
 
@@ -12,7 +12,7 @@ const Home = () => {
             <div class="homeContainer1">
                 <div className="homeNav">
 
-                        <button className="navBtn">Log in</button>
+                        <button className="navBtn"><Link to="/dblanding" className="#">Log in</Link></button>
                         <button className="navBtn">Register</button>
                 </div>
                 <div className="homeIntro">

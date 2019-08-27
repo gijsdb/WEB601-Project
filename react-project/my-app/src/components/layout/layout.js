@@ -7,10 +7,13 @@ import DBNavigation from '../dbNavigation/dbNavigation';
 
 
 
+
 const Layout = ({children}) => { 
     return (
       <div>
-        <DBNavigation/>{children}
+          
+          <DBNavigation/>{children}
+     
       </div>
       )
     }

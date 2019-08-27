@@ -1,24 +1,51 @@
-.landingContainer {
-    width: 90%;
-    margin-left: 5%;
+.dbLandingContainer {
+    margin: 0;
     padding-top: 4em;
-    padding-bottom: 3em;
-    background: yellow;
     text-align: center;
+    color: grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "header header header"
+        "contentCol1 contentCol2 contentCol3"
 }
 
-.landingHeader {
-    width: 100%;
-    background-color: red;
-    padding-top: 5em;
+header {
+    grid-area: header;
+    padding: 1em 1em;
 }
 
-.landingContent {
-    width: 100%;
-    background-color: green;
-}
-
-.landingFeatureList {
-    list-style:  none;
+section ul {
+    list-style: none;
     padding: 0;
+    font-size: 1.4em;
+}
+
+section:nth-of-type(1) {
+    grid-area: contentCol1;
+    padding: 1em 1em;
+}
+section:nth-of-type(2) {
+    grid-area: contentCol2;
+    padding: 1em 1em;
+}
+section:nth-of-type(3) {
+    grid-area: contentCol3;
+    padding: 1em 1em;
+}
+
+@media only screen and (min-width: 768) {
+    .dbLandingContainer {
+        margin: 0;
+        padding-top: 4em;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header"
+            "contentCol1" 
+            "contentCol2"
+            "contentCol3"
+    }
 }
