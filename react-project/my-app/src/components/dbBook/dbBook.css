@@ -1,31 +1,27 @@
-.bookContainer {
-    width: 90%;
-    margin-left: 5%;
+.dbBookContainer {
+    margin: 0;
     padding-top: 4em;
-    padding-bottom: 3em;
-    background: yellow;
     text-align: center;
+    color: grey;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "contentCol1 contentCol2"
 }
 
-.bookGrid {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 100%;
-    grid-template-areas: "bookLeftCol bookRightCol";
-  }
-  
-  .bookLeftCol { 
-      grid-area: bookLeftCol; 
-      background-color: orange;
-      padding: 1em 0 1em 0;
-    }
-  
-  .bookRightCol { 
-      grid-area: bookRightCol; 
-      background-color: pink;
-      padding: 1em 0 1em 0;
-    }
+section:nth-of-type(1) {
+    grid-area: contentCol1;
+    background-color: #ffa114;
 
+}
+
+section:nth-of-type(2) {
+    grid-area: contentCol2;
+    background-color:green;
+    
+}
     .btnBookNewNote {
         -moz-box-shadow: 0px 10px 9px -9px #000000;
         -webkit-box-shadow: 0px 10px 9px -9px #000000;

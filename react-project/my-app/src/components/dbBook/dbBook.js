@@ -7,6 +7,22 @@ import './dbBook.css';
 
 const DBBook = () => { 
     return (
+        <div>
+            <div className="dbBookContainer">
+                <header>
+                    <h1>Book title - Author</h1>
+                    <img src="../../img/iconBackArrow.png" ></img>
+                </header>
+                <section>
+                    <h2>cover image appears here</h2>
+                </section>
+                <section>
+
+                </section>
+            </div>
+      
+
+        {/* 
         <div className="bookContainer">
             <div className="bookHeader">
                 <h1>Book title - Book author</h1>
@@ -24,6 +40,8 @@ const DBBook = () => {
                 </div>
             </div>
         </div>
+     */}
+      </div>
       )
     }
 export default DBBook;
