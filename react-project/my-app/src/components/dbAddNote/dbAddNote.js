@@ -8,9 +8,9 @@ import './dbAddNote.css';
 const DBAddNote = () => { 
     return (
     <div className="addNoteContainer">
-        <div className="addNoteHeader">
+        <header>
             <h1>Add a new note</h1>
-        </div>
+        </header>
         <div className="textEditorContainer">
             <h2>The text editor will eventually appear here</h2>
         </div>

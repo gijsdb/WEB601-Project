@@ -1,13 +1,16 @@
 .addNoteContainer {
-    width: 90%;
-    margin-left: 5%;
+    margin: 0;
     padding-top: 4em;
-    padding-bottom: 3em;
-    background: yellow;
     text-align: center;
+    color: grey;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "content"
 }
 
 .textEditorContainer {
-    background: red;
+    grid-area: content;
     
 }

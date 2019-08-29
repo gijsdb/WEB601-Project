@@ -1,8 +1,19 @@
 .noteContainer {
-    width: 90%;
-    margin-left: 5%;
+    margin: 0;
     padding-top: 4em;
-    padding-bottom: 3em;
-    background: yellow;
     text-align: center;
+    color: grey;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    grid-template-areas: 
+        "header"
+        "content"
+}
+
+
+.noteContent {
+    grid-area: content;
+    font-size: 1.75em;
+    margin: 0em 1em;
 }

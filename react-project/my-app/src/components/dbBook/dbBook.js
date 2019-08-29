@@ -11,36 +11,18 @@ const DBBook = () => {
             <div className="dbBookContainer">
                 <header>
                     <h1>Book title - Author</h1>
-                    <img src="../../img/iconBackArrow.png" ></img>
+                
+                    <img src="../../img/iconBackArrow.png"></img>
                 </header>
                 <section>
                     <h2>cover image appears here</h2>
                 </section>
                 <section>
-
+                    <a href="#" className="btnBookNewNote">New note</a>
+                    <a href="#" className="btnBookNewNote">Delete book</a>
                 </section>
             </div>
       
-
-        {/* 
-        <div className="bookContainer">
-            <div className="bookHeader">
-                <h1>Book title - Book author</h1>
-            </div>
-
-            <div className="bookGrid">
-                <div className="bookLeftCol">
-                    <h1>Book cover image will appear here</h1>
-                </div>
-                <div className="bookRightCol">
-                    <h2>Book rating</h2>
-                    <h2>Total note count on this book</h2><br></br>
-                    <a href="#" className="btnBookNewNote">New Note</a><br></br><br></br>
-                    <a href="#" className="btnBookNewNote">Delete book</a>
-                </div>
-            </div>
-        </div>
-     */}
       </div>
       )
     }

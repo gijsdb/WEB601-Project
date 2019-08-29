@@ -8,10 +8,10 @@ import './dbAddBook.css';
 const DBAddBook = () => { 
     return (
             <div className="addBookContainer">
-                <div className="addBookTitle">
+                <header>
                     <h1>Add a new book</h1>
-                </div>
-                <div className="addBookForm">
+                </header>
+                <div className='bookInput'>
                     <form>
                     <label>
                         Title:
