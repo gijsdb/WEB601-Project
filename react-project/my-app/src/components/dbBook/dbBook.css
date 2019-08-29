@@ -5,10 +5,11 @@
     color: grey;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
     grid-template-areas: 
         "header header"
         "contentCol1 contentCol2"
+        "noteList noteList"
 }
 
 section:nth-of-type(1) {
@@ -21,9 +22,6 @@ section:nth-of-type(2) {
 }
 
     .btnBookNewNote {
-        -moz-box-shadow: 0px 10px 9px -9px #000000;
-        -webkit-box-shadow: 0px 10px 9px -9px #000000;
-        box-shadow: 0px 10px 9px -9px #000000;
         background-color:transparent;
         -moz-border-radius:4px;
         -webkit-border-radius:4px;
@@ -37,11 +35,26 @@ section:nth-of-type(2) {
         font-weight:bold;
         padding:6px 12px;
         text-decoration:none;
+        transition: 0.3s;
     }
     .btnBookNewNote:hover {
-        background-color:transparent;
+        background-color: #ffa114;
+        color: #fff;
     }
     .btnBookNewNote:active {
         position:relative;
         top:1px;
     }
+
+.bookActionList li {
+    margin: 1em 0em;
+}
+
+.noteList {
+    grid-area: noteList;
+}
+.noteList ul {
+    list-style: none;
+    font-size: 2em;
+    
+}

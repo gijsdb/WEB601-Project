@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './dbNote.css';
+import { Link } from 'react-router-dom'
 
 
 
@@ -10,6 +11,7 @@ const DBNote = () => {
     <div className="noteContainer">
         <header>
             <h1>Note title - Note date</h1>
+            <Link to="/dbreadbooks" className="btnBookNewNote">Back</Link>
         </header>
         <div className="noteContent">
             <p>

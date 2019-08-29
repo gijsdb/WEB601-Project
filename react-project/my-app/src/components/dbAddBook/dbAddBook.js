@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { Link } from 'react-router-dom'
 import './dbAddBook.css';
 
 
@@ -10,6 +11,7 @@ const DBAddBook = () => {
             <div className="addBookContainer">
                 <header>
                     <h1>Add a new book</h1>
+                    <Link to="/dbreadbooks" className="btnBookNewNote">Back</Link>
                 </header>
                 <div className='bookInput'>
                     <form>
