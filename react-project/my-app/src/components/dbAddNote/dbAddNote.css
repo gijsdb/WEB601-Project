@@ -12,5 +12,9 @@
 
 .textEditorContainer {
     grid-area: content;
-    
+    background-color: lightgrey;
+    color: #fff;
+    height: 50vh;
+    width: 80vw;
+    margin-left: 10vw;
 }
