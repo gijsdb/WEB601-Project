@@ -11,10 +11,18 @@ export default class MyEditor extends React.Component {
   _onBoldClick() {
     this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
   }
+  _onItalicClick() {
+    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'));
+  }
+  _onUnderlineClick() {
+    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINE'));
+  }
   render() {
     return (
         <div>
             <button onClick={this._onBoldClick.bind(this)}>Bold</button>
+            <button onClick={this._onItalicClick.bind(this)}>Italic</button>
+            <button onClick={this._onUnderlineClick.bind(this)}>Underline</button>
             <Editor editorState={this.state.editorState} onChange={this.onChange} />
         </div>
     );

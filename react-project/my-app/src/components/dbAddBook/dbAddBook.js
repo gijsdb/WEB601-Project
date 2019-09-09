@@ -4,10 +4,9 @@ import { Link } from 'react-router-dom'
 import './dbAddBook.css';
 
 
-
-
-const DBAddBook = () => { 
-    return (
+export default class DBAddBook extends React.Component {
+    render() {
+        return(
             <div className="addBookContainer">
                 <header>
                     <h1>Add a new book</h1>
@@ -35,6 +34,6 @@ const DBAddBook = () => {
                     </form>
                 </div>
             </div>
-      )
+        )
     }
-export default DBAddBook;
+}

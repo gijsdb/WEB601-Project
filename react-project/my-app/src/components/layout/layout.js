@@ -4,10 +4,6 @@ import './layout.css';
 import DBNavigation from '../dbNavigation/dbNavigation';
 
 
-
-
-
-
 const Layout = ({children}) => { 
     return (
       <div>

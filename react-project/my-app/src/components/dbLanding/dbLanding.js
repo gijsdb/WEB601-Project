@@ -2,15 +2,19 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './dbLanding.css';
 
+export default class DBLanding extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.userName = "$username"
+    }
 
-
-const DBLanding = () => { 
-    return (
-        <div>
+    render() {
+        return(
+            <div>
             <div className="dbLandingContainer">
                 <header>
-                    <h1>Welcome to your dashboard $username</h1>
+                    <h1>Welcome to your dashboard {this.userName}</h1>
                 </header>
                 <section>
                     <h2>Quick navigation</h2>
@@ -37,6 +41,6 @@ const DBLanding = () => {
                 </section>
             </div>
         </div>
-      )
+        )
     }
-export default DBLanding;
+}

@@ -4,11 +4,10 @@ import { Link } from 'react-router-dom'
 import './dbBook.css';
 
 
-
-
-const DBBook = () => { 
-    return (
-        <div>
+export default class DBBook extends React.Component {
+    render() {
+        return(
+            <div>
             <div className="dbBookContainer">
                 <header>
                     <h1>Book title - Author</h1>
@@ -35,8 +34,7 @@ const DBBook = () => {
                     </ul>
                 </div>
             </div>
-      
       </div>
-      )
+    )    
     }
-export default DBBook;
+}
