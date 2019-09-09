@@ -11,7 +11,7 @@ export default class DBNote extends React.Component {
         <div className="noteContainer">
             <header>
                 <h1>Note title - Note date</h1>
-                <Link to="/dbreadbooks" className="btnBookNewNote">Back</Link>
+                <Link to="/dbbook" className="btnBookNewNote">Back</Link>
             </header>
             <div className="noteContent">
                 <p>

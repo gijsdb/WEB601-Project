@@ -2,9 +2,18 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import './dbBook.css';
+import faker from 'faker';
 
 
 export default class DBBook extends React.Component {
+    constructor(props) {
+        super(props);
+        this.bookTitle = "title"
+        this.bookAuthor = "author"
+        this.bookCover = faker.image.avatar()
+    }
+
+
     render() {
         return(
             <div>
@@ -16,6 +25,7 @@ export default class DBBook extends React.Component {
                 </header>
                 <section>
                     <h2>cover image appears here</h2>
+                    <img src={this.bookCover}></img>
                 </section>
                 <section>
                     <ul className="bookActionList">
@@ -27,7 +37,7 @@ export default class DBBook extends React.Component {
                 <div className="noteList">
                     <h2>Notes on book</h2>
                     <ul>
-                        <li>Note one</li>
+                        <li><Link to="/dbnote">Note one</Link></li>
                         <li>Note two</li>
                         <li>Note three</li>
                         <li>Note four</li>
