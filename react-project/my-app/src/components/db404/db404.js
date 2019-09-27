@@ -7,8 +7,8 @@ import './db404.css';
 
 const DB404 = () => { 
     return (
-    <div>
-
+    <div class="errorContainer">
+      <h1>One problemo, page not found</h1>
     </div>
       )
     }

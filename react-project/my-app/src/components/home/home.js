@@ -4,15 +4,16 @@ import './home.css';
 import { Link } from 'react-router-dom'
 
 
-
-const Home = () => { 
+export default class Home extends React.Component { 
+    
+    render() {
     return (
     <div>
         <div class="fullBg">
             <div class="homeContainer1">
                 <div className="homeNav">
 
-                        <button className="navBtn"><Link to="/dblanding" className="#">Log in</Link></button>
+                        <Link to="/dblanding" className="#"><button className="navBtn">Log in</button></Link>
                         <button className="navBtn">Register</button>
                 </div>
                 <div className="homeIntro">
@@ -39,6 +40,5 @@ const Home = () => {
     </div>
       )
 
-    }
-export default Home;
+    }}
 
