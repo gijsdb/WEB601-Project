@@ -8,16 +8,18 @@ class Book {
         this.title = title;
         this.author = author;
         this.date = date;
-        this.file = file;
-        
+        this.file = file;     
     }
 }
+
+var bookArray = [];
 
 export default class DBAddBook extends React.Component {
     
     constructor() {
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
+        console.log(this.state)
       }
 
       handleSubmit(event) {
@@ -26,8 +28,8 @@ export default class DBAddBook extends React.Component {
         const lcAuthor = document.getElementById('author').value;
         const lcDate = document.getElementById('date').value;
         const lcFile = document.getElementById('file').value;
-        var testBook = new Book(lcTitle, lcAuthor, lcDate, lcFile)
-        console.log(testBook);
+        bookArray.push(new Book(lcTitle, lcAuthor, lcDate, lcFile))
+        console.log(bookArray);
         //console.log(lcTitle + lcAuthor + lcDate + lcFile)
       }
 
@@ -64,7 +66,9 @@ export default class DBAddBook extends React.Component {
             return testBook;
         }*/
 
-    
+        function dataHandle() {
+            this.props.callbackFromParent(bookArray);
+        }
 
         return(
             <div className="addBookContainer">

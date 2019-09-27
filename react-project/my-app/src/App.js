@@ -17,20 +17,19 @@ function App() {
   return (
     <div>
       <BrowserRouter history={history}>
-      <Switch>
-          <Route path='/home' component={Home} />
-                <Layout>
-                  <Switch>
-                    <Route path='/dblanding' component={DBLanding} /> 
-                    <Route path='/dbreadbooks' component={DBReadBooks} />
-                    <Route path='/dbaddbook' component={DBAddBook} />
-                    <Route path='/dbbook' component={DBBook} />
-                    <Route path='/dbnote' component={DBNote} />
-                    <Route path='/dbaddnote' component={DBAddNote} />
-                   {/*<Route path={NotFound} component={NotFound} status={404} />*/}
-                  </Switch>
-                </Layout> 
-        </Switch>
+      <Route path='/home' component={Home} /> 
+      <Route exact path='/' component={Home} /> 
+      <Layout>
+             <Switch>
+                  <Route path='/dblanding' component={DBLanding} /> 
+                  <Route path='/dbreadbooks' component={DBReadBooks} />
+                  <Route path='/dbaddbook' component={DBAddBook} />
+                  <Route path='/dbbook' component={DBBook} />
+                  <Route path='/dbnote' component={DBNote} />
+                  <Route path='/dbaddnote' component={DBAddNote} />
+                  {/*<Route path={NotFound} component={NotFound} status={404} />*/}
+              </Switch>
+        </Layout> 
       </BrowserRouter>
     </div>
   );

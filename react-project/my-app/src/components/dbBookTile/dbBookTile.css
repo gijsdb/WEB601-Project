@@ -1,0 +1,14 @@
+.module {
+    /* Demo-Specific Styles */
+    background-color: #e8e8ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 25em;
+    width: 100%;
+    z-index: 5;
+    /* Flex Fallback */
+    margin-left: 5px;
+    margin-right: 5px;
+    flex: 1 1 200px;
+  }

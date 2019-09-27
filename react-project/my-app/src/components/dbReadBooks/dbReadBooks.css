@@ -16,20 +16,7 @@
     grid-gap: 1em;
   }
   
-  .module {
-    /* Demo-Specific Styles */
-    background: #eaeaea;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 25em;
-    width: 100%;
-    
-    /* Flex Fallback */
-    margin-left: 5px;
-    margin-right: 5px;
-    flex: 1 1 200px;
-  }
+  
   
   /* If Grid is supported, remove the margin we set for the fallback */
   @supports (display: grid) {
