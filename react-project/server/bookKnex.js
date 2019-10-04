@@ -4,7 +4,7 @@ function listAllBooksKnex(req, res) {
         knex
     } = req.app.locals
     knex
-        .select('Title', 'Author', 'DateRead')
+        .select('ID','Title', 'Author', 'DateRead')
         .from('tblBooks')
        
         .then(data => res.status(200).json(data))
@@ -22,7 +22,7 @@ function listSingleBook(req, res) {
     } = req.params
     knex
         // DB Query
-        .select('Title', 'Author', 'DateRead')
+        .select('ID','Title', 'Author', 'DateRead')
         .from('tblBooks')
         .where({
             id: `${id}`
