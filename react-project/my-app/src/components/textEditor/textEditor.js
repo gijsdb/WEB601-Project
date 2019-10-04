@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import {Editor, EditorState, RichUtils} from 'draft-js';
 
 export default class MyEditor extends React.Component {

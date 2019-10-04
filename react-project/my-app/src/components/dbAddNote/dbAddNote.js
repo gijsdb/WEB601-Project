@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './dbAddNote.css';
 import MyEditor from '../textEditor/textEditor'
 import { Link } from 'react-router-dom'

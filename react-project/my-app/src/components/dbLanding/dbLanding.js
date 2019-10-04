@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './dbLanding.css';
 
 export default class DBLanding extends React.Component {

@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import './dbBook.css';
 import faker from 'faker';
@@ -25,7 +24,7 @@ export default class DBBook extends React.Component {
                 </header>
                 <section>
                     <h2>cover image appears here</h2>
-                    <img src={this.bookCover}></img>
+                    <img src={this.bookCover} alt="An image loaded with faker js"></img>
                 </section>
                 <section>
                     <ul className="bookActionList">

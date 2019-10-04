@@ -1,5 +1,4 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import './dbBookTile.css';
 
@@ -9,7 +8,7 @@ import './dbBookTile.css';
 
             <div className="readBookGrid">
             {books.map((book) => (
-               <div class="module">
+               <div key={book.ID} className="module">
                   <h2><u>Title</u></h2>
                   <h3>{book.Title}</h3>
                   <h2><u>Author</u></h2>

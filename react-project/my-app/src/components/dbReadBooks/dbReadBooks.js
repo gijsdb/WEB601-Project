@@ -1,5 +1,4 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import './dbReadBooks.css';
 import { Link } from 'react-router-dom'
 import DBBookTile from '../dbBookTile/dbBookTile'

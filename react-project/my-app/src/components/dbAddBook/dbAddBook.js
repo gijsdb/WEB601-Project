@@ -3,14 +3,6 @@ import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
 import './dbAddBook.css';
 
-class Book {
-    constructor(title, author, date, file) {
-        this.title = title;
-        this.author = author;
-        this.date = date;
-        this.file = file;     
-    }
-}
 
 var bookArray = [];
 
@@ -19,11 +11,22 @@ export default class DBAddBook extends React.Component {
     constructor() {
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
-        console.log(this.state)
       }
 
       handleSubmit(event) {
         event.preventDefault();
+        fetch('http://localhost:4200/api/books', {
+            method: 'post',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+             "Title": this.title.value,
+             "Author": this.author.value,
+             "DateRead": this.date.value,
+            })});
+        console.log("Book added");
+    }
+
+        /*
         const lcTitle = document.getElementById('title').value;
         const lcAuthor = document.getElementById('author').value;
         const lcDate = document.getElementById('date').value;
@@ -31,40 +34,9 @@ export default class DBAddBook extends React.Component {
         bookArray.push(new Book(lcTitle, lcAuthor, lcDate, lcFile))
         console.log(bookArray);
         //console.log(lcTitle + lcAuthor + lcDate + lcFile)
-      }
-
-
+        */
+     
     render() {
-
-        /*
-        class Book {
-            constructor(title, author, date, file) {
-                this.title = title;
-                this.author = author;
-                this.date = date;
-                this.file = file;
-                
-            }
-          
-        }
-        const CreateBook = () => {
-            function useThisInfo(e) {
-                e.preventDefault();
-                const lcTitle = document.getElementsByName('title').value;
-                const lcAuthor = document.getElementsByName('author').value;
-                var testBook = new Book(lcTitle,lcAuthor);
-                return testBook
-            }
-        }
-        const SubmitBook = (event) => {
-            var lcTitle = document.getElementsByName('title')
-            var lcAuthor = document.getElementsByName('author')
-            var lcDate = document.getElementsByName('date')
-            var lcFile = document.getElementsByName('file')
-            var testBook = new Book(lcTitle,lcAuthor,lcDate,lcFile)
-            console.log("I have fired")
-            return testBook;
-        }*/
 
         function dataHandle() {
             this.props.callbackFromParent(bookArray);
@@ -80,19 +52,19 @@ export default class DBAddBook extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                     <label>
                         Title:
-                        <input type="text" id="title"/>
+                        <input ref={(ref) => {this.title = ref}} type="text" id="title" name="title"/>
                     </label><br></br>
                     <label>
                         Author:
-                        <input type="text" id="author"/>
+                        <input ref={(ref) => {this.author = ref}} type="text" id="author" name="author"/>
                     </label><br></br>
                     <label>
                         Date read:
-                        <input type="date" id="date"/>
+                        <input ref={(ref) => {this.date = ref}} type="date" id="date" name="date"/>
                     </label><br></br>
                     <label>
                         Book cover:
-                        <input type="file" id="file" />
+                        <input ref={(ref) => {this.file = ref}} type="file" id="file" name="file"/>
                     </label><br></br>
                     <input type="submit" id="Submit"/>
                     </form>
