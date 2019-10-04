@@ -1,23 +1,19 @@
-/* In the file we are going to use knex with employee controller */
-
-
+// Lists all the books
 function listAllBooksKnex(req, res) {
-    /*We are going to use the latest Object destructuring of JS and this means 
-        that knex is going to be extracted from locals object forming
-    */
     const {
         knex
     } = req.app.locals
     knex
         .select('Title', 'Author', 'DateRead')
         .from('tblBooks')
-        /*We going to use a promise based lib */
+       
         .then(data => res.status(200).json(data))
         .catch(error => res.status(500).json(error))
 }
 
+// Lists single books by ID
 function listSingleBook(req, res) {
-    /* Here we are going to list information for a single employee */
+    // Destructuring 
     const {
         knex
     } = req.app.locals
@@ -25,12 +21,14 @@ function listSingleBook(req, res) {
         id
     } = req.params
     knex
+        // DB Query
         .select('Title', 'Author', 'DateRead')
         .from('tblBooks')
         .where({
             id: `${id}`
         })
-        /*We going to use a promise based lib */
+       
+        // Response
         .then(data => {
             if (data.length > 0) {
                 return res.status(200).json(data)
@@ -41,20 +39,17 @@ function listSingleBook(req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+// Add a book to the DB
 function postBook(req, res) {
     const {
         knex
     } = req.app.locals
-    /* Now we are going to work with employees table and we can insert and then if we call
-    a response for that. 
-    */
-    // console.log(req.body)
     const payload = req.body
-    /* When you do a POST method you also send a payload with your POST req, express access the payload.
-       We need to parse payload because Express does not see payload as part of the req body */
+    // Parsing payload
     const mandatoryColumns = ['Title','Author']
     const payloadKeys = Object.keys(payload)
     const mandatoryColumnsExists = mandatoryColumns.every(mc => payloadKeys.includes(mc))
+    // Checking if MC is filled then posts
     if (mandatoryColumnsExists) {
         knex('tblBooks')
             .insert(payload)
@@ -66,6 +61,7 @@ function postBook(req, res) {
     }
 }
 
+// Updating a book by id
 function updateBook(req, res) {
     const {
         knex
@@ -87,6 +83,7 @@ function updateBook(req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+// Deleting a book by id
 function deleteBook(req, res) {
     const {
         knex
