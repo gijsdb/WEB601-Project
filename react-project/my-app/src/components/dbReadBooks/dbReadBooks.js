@@ -41,18 +41,33 @@ export default class DBReadBooks extends React.Component {
         //setTimeout(function() {console.log(this.state.books)}, 8000)
 	}
 
+    render() {
+        return(
+           
+            <div className="readContainer">
+            
+                 <DBBookTile books={this.state.books}/>              
+                 <div className="addBook" ><Link to="/dbaddbook" className="navLink">Add book</Link></div>
+                 
+         </div>
+        )
+    }
 
+
+
+    /*
     render() {
         return(
            
             <div className="readContainer">
             <div className="readBookGrid">
                  <DBBookTile books={this.state.books}/>              
-                 <div className="module" ><Link to="/dbaddbook" className="navLink">Add book</Link></div>
+                 {//<div className="module" ><Link to="/dbaddbook" className="navLink">Add book</Link></div>
+                 }
              </div>
          </div>
         )
-    }
+    }*/
 
 }
 

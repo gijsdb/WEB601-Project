@@ -6,15 +6,20 @@ import './dbBookTile.css';
 
     const DBBookTile = ({ books }) => {
         return (
-          <div>
+
+            <div className="readBookGrid">
             {books.map((book) => (
-                <div class="module">
-                  <h3>{book.Title}</h3><br/>
-                  <h3>{book.Author}</h3><br/>
-                  <h3>{book.DateRead}</h3><br/>
-                </div>
+               <div class="module">
+                  <h2><u>Title</u></h2>
+                  <h3>{book.Title}</h3>
+                  <h2><u>Author</u></h2>
+                  <h3>{book.Author}</h3>
+                  <h2><u>Date read</u></h2>
+                  <h3>{book.DateRead}</h3>
+               </div>
             ))}
-          </div>
+            </div>
+       
         )
       };
       export default DBBookTile
