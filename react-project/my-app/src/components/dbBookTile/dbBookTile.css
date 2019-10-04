@@ -9,6 +9,7 @@
     z-index: 5;
     /* Flex Fallback */
     margin-left: 5px;
+    font-size: 10px;
     margin-right: 5px;
     flex: 1 1 200px;
   }
