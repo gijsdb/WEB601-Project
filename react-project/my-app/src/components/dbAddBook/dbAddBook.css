@@ -2,8 +2,9 @@
     margin: 0;
     padding-top: 4em;
     text-align: center;
-    color: grey;
+    color: #af0606;
     display: grid;
+    font-family: 'Be Vietnam', sans-serif;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 

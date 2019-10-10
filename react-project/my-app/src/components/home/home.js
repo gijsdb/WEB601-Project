@@ -13,15 +13,18 @@ export default class Home extends React.Component {
             <div class="homeContainer1">
                 <div className="homeNav">
 
-                        <Link to="/dblanding" className="#"><button className="navBtn">Log in</button></Link>
+                        <Link to="/dblanding" className="linkTxt2"><button className="navBtn">Log in</button></Link>
                         <button className="navBtn">Register</button>
                 </div>
+                
                 <div className="homeIntro">
                     <h1>BookNote</h1>
                     <h2>An easy way to store and manage notes on books you've read</h2>
-                    <button className="actionBtn">
-                        Learn more
-                    </button>
+                </div>
+                <div className="ctaBtn">
+                 <button className="actionBtn">
+                    Learn more
+                  </button>
                 </div>
                 </div>
                 <div class="homeFeatureList">
@@ -34,11 +37,7 @@ export default class Home extends React.Component {
                         </ul>
                     </div>
                 </div>
-            </div>
-
-        
+            </div>  
     </div>
-      )
-
-    }}
+)}}
 

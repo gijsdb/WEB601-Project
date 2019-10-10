@@ -38,18 +38,29 @@
     color: #000;
 }
 
+.linkTxt2 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
 .homeIntro {
     color: #fff;
     height: 80%;
     width: 80%;
     align-self: center;
-    margin: 1em;
+    margin: 1em 0 0 4em;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+.ctaBtn {
+    width: 100vw;
+    text-align: center;
 }
 
 .homeFeatureList {
     background: #FFF;
     padding: 2em 0 2em 0;
     text-align: center;
+    font-family: 'Be Vietnam', sans-serif;
     color: grey;
 }
 
@@ -76,7 +87,8 @@
     border: #FFF 2px solid;
     background-color: transparent;
     transition: 0.3s;
-    margin-top: 1em;
+    margin: 1em;
+    width: 10em;
 }
 
 .actionBtn:hover {

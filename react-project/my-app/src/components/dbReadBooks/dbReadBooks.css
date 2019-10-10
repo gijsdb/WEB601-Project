@@ -6,11 +6,13 @@
 }
 
 .addBook {
-  background-color: green;
+  background-color: #AF0506;
   padding: 1em;
   width: 50%;
   margin-left: 25%;
+  margin-top: 1em;
   color: #fff;
   text-align: center;
   border-radius: 5px;
+  transition: .5s;
 }

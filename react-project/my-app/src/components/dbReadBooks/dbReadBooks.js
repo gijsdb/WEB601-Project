@@ -46,7 +46,7 @@ export default class DBReadBooks extends React.Component {
             <div className="readContainer">
             
                  <DBBookTile books={this.state.books}/>              
-                 <div className="addBook" ><Link to="/dbaddbook" className="navLink">Add book</Link></div>
+                 <div className="addBook" ><Link to="/dbaddbook" className="linkTxt">Add book</Link></div>
                  
          </div>
         )

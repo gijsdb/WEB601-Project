@@ -10,9 +10,9 @@ const DBNavigation = () => {
     <div className="navContainer">
         <nav className="dbNav">
             <ul className="navList">
-                <li><Link to="/home" className="navLink">Log out</Link></li>
-                <li><Link to="/dbreadbooks" className="#">Read Books</Link></li>
-                <li><Link to="/dblanding" className="#">Home</Link></li>
+                <li><Link to="/home" className="linkTxt">Log out</Link></li>
+                <li><Link to="/dbreadbooks" className="linkTxt">Read Books</Link></li>
+                <li><Link to="/dblanding" className="linkTxt">Home</Link></li>
             </ul>
         </nav>
     </div>

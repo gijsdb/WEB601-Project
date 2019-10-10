@@ -1,11 +1,11 @@
 .navContainer {
     width: 100%;
-    height: 3em;
+    height: 4em;
     position: fixed;
 }
 
 .dbNav {
-    background: #F76300;
+    background: #af0606;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -21,5 +21,19 @@
     float: right;
     text-decoration: none;
     margin: 0 1em 0 1em;
+}
+
+.linkTxt {
+    text-decoration: none;
+    color: #E6E6E8;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    transition: .5s;
+    font-size: 1.5em;
+}
+
+.linkTxt:hover {
+    transition: .5s;
     color: #fff;
+    font-size: 1.6em;
 }
