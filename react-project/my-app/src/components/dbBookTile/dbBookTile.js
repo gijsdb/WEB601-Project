@@ -6,17 +6,6 @@ import './dbBookTile.css';
 
 export default class DBBookTile extends React.Component {
 
-    /*
-    handleSubmit(event) {
-        event.preventDefault();
-        fetch('http://localhost:4200/api/books', {
-            method: 'delete',
-            headers: {'Content-Type':'application/json'},
-            //body: JSON.stringify({ID: this.books.id})
-        });
-        console.log("Book deleted");
-    }*/
-
     constructor(props) {
         super(props);
         this.deleteBook = this.deleteBook.bind(this)

@@ -52,19 +52,19 @@ export default class DBAddBook extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                     <label>
                         Title:
-                        <input ref={(ref) => {this.title = ref}} type="text" id="title" name="title"/>
+                        <input ref={(ref) => {this.title = ref}} type="text" id="title" name="title" autocomplete="off"/>
                     </label><br></br>
                     <label>
                         Author:
-                        <input ref={(ref) => {this.author = ref}} type="text" id="author" name="author"/>
+                        <input ref={(ref) => {this.author = ref}} type="text" id="author" name="author" autocomplete="off"/>
                     </label><br></br>
                     <label>
                         Date read:
-                        <input ref={(ref) => {this.date = ref}} type="date" id="date" name="date"/>
+                        <input ref={(ref) => {this.date = ref}} type="date" id="date" name="date" autocomplete="off"/>
                     </label><br></br>
                     <label>
                         Book cover:
-                        <input ref={(ref) => {this.file = ref}} type="file" id="file" name="file"/>
+                        <input ref={(ref) => {this.file = ref}} type="file" id="file" name="file" autocomplete="off"/>
                     </label><br></br>
                     <input type="submit" id="Submit"/>
                     </form>
