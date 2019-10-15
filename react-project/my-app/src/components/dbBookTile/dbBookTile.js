@@ -11,6 +11,7 @@ export default class DBBookTile extends React.Component {
         this.deleteBook = this.deleteBook.bind(this)
     }
 
+    // Deletes a book from the database by ID
     deleteBook(id) {
         fetch('http://localhost:4200/api/books' + '/' + id, {
           method: 'DELETE'
@@ -22,7 +23,7 @@ export default class DBBookTile extends React.Component {
         window.location.reload();
       }
 
-
+    // Maps out each book in the array books and displays a tile for it
     render() {
         return(
             <div className="readBookGrid">
@@ -43,7 +44,7 @@ export default class DBBookTile extends React.Component {
 }
 
 
-/*
+/* Old code
     const DBBookTile = ({ books }) => {
        
         return (

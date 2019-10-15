@@ -1,6 +1,8 @@
 import React from 'react'
 import './dbLanding.css';
 
+// The dashboard landing page
+
 export default class DBLanding extends React.Component {
 
     constructor(props) {

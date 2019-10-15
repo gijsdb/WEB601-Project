@@ -1,6 +1,8 @@
 import React from 'react';
 import {Editor, EditorState, RichUtils} from 'draft-js';
 
+// The component which allows users to create notes on a certain book, using the plugin draft-js for the rich text editor
+
 export default class MyEditor extends React.Component {
   constructor(props) {
     super(props);

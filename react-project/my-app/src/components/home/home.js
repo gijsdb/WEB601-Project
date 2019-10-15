@@ -3,6 +3,7 @@ import React from 'react'
 import './home.css';
 import { Link } from 'react-router-dom'
 
+// The homepage of the application where users login and register
 
 export default class Home extends React.Component { 
     

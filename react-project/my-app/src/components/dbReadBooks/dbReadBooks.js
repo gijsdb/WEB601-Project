@@ -14,6 +14,8 @@ export default class DBReadBooks extends React.Component {
 		   })
 	}
 
+
+    // Retrieves all the books from the database and saves them in the array books
     GetUserBooks() {
         fetch('http://localhost:4200/api/books')
 		.then(res => res.json())
@@ -34,6 +36,7 @@ export default class DBReadBooks extends React.Component {
         })	
     }
 
+    // When the component has mounted, the books will be retrieved
     componentDidMount() {
         this.GetUserBooks();
         //this.timer = setInterval(() => this.GetUserBooks(), 10000);

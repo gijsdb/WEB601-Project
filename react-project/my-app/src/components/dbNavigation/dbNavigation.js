@@ -3,7 +3,7 @@ import './dbNavigation.css';
 import { Link } from 'react-router-dom'
 
 
-
+//The dashboard navigation which is present on each dashboard page
 
 const DBNavigation = () => { 
     return (

@@ -3,6 +3,7 @@ import './dbNote.css';
 import { Link } from 'react-router-dom'
 
 
+// The component which will display a note on a specific book
 
 export default class DBNote extends React.Component {
     render() {

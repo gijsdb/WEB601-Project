@@ -2,7 +2,7 @@ import React from 'react'
 import './db404.css';
 
 
-
+// 404 page, displayed when page is not available
 
 const DB404 = () => { 
     return (

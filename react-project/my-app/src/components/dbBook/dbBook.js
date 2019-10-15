@@ -4,7 +4,10 @@ import './dbBook.css';
 import faker from 'faker';
 
 
+// The page which displays more information about each individual book when selected from the "Read Books" screen
+
 export default class DBBook extends React.Component {
+
     constructor(props) {
         super(props);
         this.bookTitle = "title"
