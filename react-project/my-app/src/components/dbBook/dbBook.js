@@ -5,6 +5,7 @@ import faker from 'faker';
 
 
 // The page which displays more information about each individual book when selected from the "Read Books" screen
+// Currently is not connected to the database --> Work in progress
 
 export default class DBBook extends React.Component {
 

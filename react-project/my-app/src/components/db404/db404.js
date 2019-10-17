@@ -2,7 +2,8 @@ import React from 'react'
 import './db404.css';
 
 
-// 404 page, displayed when page is not available
+// 404 page, displayed when page is not available 
+// Displays when the URL contains an invalid URL
 
 const DB404 = () => { 
     return (

@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 
 // The component which will display a note on a specific book
+// Is currently not functional --> Work in progress
 
 export default class DBNote extends React.Component {
     render() {

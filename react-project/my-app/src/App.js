@@ -14,6 +14,9 @@ import DB404 from './components/db404/db404'
 const createBrowserHistory = require("history").createBrowserHistory;
 const history = createBrowserHistory();
 
+// All the routes for my application, any route that is not one of the below routes will display the 404 page
+// Using React Router ;)
+
 function App() {
   return (
     <div>

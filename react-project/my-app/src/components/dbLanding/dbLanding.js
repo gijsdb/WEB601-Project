@@ -2,6 +2,7 @@ import React from 'react'
 import './dbLanding.css';
 
 // The dashboard landing page
+// The first page that the user will see after they login to the application
 
 export default class DBLanding extends React.Component {
 

@@ -3,7 +3,9 @@ import React from 'react'
 import './home.css';
 import { Link } from 'react-router-dom'
 
-// The homepage of the application where users login and register
+// The homepage of the application where users can login and register
+// Currently does not have login and register functionality --> Work in progress
+// This is the page the user will land on when coming from a search engine
 
 export default class Home extends React.Component { 
     

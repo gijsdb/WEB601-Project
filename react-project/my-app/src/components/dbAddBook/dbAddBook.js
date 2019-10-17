@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom'
 import './dbAddBook.css';
 
 
+// The component which contains the form to add books to the database. 
+// Takes data from the form, converts it to JSON and then POSTS to the database
+
 var bookArray = [];
 
 export default class DBAddBook extends React.Component {
@@ -27,7 +30,7 @@ export default class DBAddBook extends React.Component {
         console.log("Book added");
     }
 
-        /*
+        /* OLD CODE
         const lcTitle = document.getElementById('title').value;
         const lcAuthor = document.getElementById('author').value;
         const lcDate = document.getElementById('date').value;

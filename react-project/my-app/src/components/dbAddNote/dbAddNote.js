@@ -4,8 +4,8 @@ import MyEditor from '../textEditor/textEditor'
 import { Link } from 'react-router-dom'
 
 
-
-
+// The page where the user can add a note to a book through the text editor which lives in the component MyEditor
+// Currently not connected to the backend
 
 export default class DBAddNote extends React.Component {
     render() {

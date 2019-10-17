@@ -3,6 +3,9 @@ import './dbReadBooks.css';
 import { Link } from 'react-router-dom'
 import DBBookTile from '../dbBookTile/dbBookTile'
 
+// The heart of my application where the users read books are displayed as tiles
+// Uses the RESTful API to retrieve all the books from the database and adds them to the books array which is held in the state
+
 //const myBooks = [];
 export default class DBReadBooks extends React.Component {
    
@@ -39,10 +42,9 @@ export default class DBReadBooks extends React.Component {
     // When the component has mounted, the books will be retrieved
     componentDidMount() {
         this.GetUserBooks();
-        //this.timer = setInterval(() => this.GetUserBooks(), 10000);
-        //setTimeout(function() {console.log(this.state.books)}, 8000)
 	}
 
+    // One DBBookTile is created for each item in the books array
     render() {
         return(
            
@@ -54,23 +56,6 @@ export default class DBReadBooks extends React.Component {
          </div>
         )
     }
-
-
-
-    /*
-    render() {
-        return(
-           
-            <div className="readContainer">
-            <div className="readBookGrid">
-                 <DBBookTile books={this.state.books}/>              
-                 {//<div className="module" ><Link to="/dbaddbook" className="navLink">Add book</Link></div>
-                 }
-             </div>
-         </div>
-        )
-    }*/
-
 }
 
 
