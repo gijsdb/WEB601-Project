@@ -23,7 +23,6 @@ export default class DBBook extends React.Component {
             <div className="dbBookContainer">
                 <header>
                     <h1>Book title - Author</h1>
-                
                     <Link to="/dbreadbooks" className="btnBookNewNote">Back</Link>
                 </header>
                 <section>

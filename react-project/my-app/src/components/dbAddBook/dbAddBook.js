@@ -14,10 +14,10 @@ export default class DBAddBook extends React.Component {
     constructor() {
         super();
         this.handleSubmit = this.handleSubmit.bind(this);
-      }
+    }
 
       // Handles the submission of the add book form and adds it to the database
-      handleSubmit(event) {
+    handleSubmit(event) {
         event.preventDefault();
         fetch('http://localhost:4200/api/books', {
             method: 'post',

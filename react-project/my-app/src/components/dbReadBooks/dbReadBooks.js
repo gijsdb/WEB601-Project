@@ -46,14 +46,11 @@ export default class DBReadBooks extends React.Component {
 
     // One DBBookTile is created for each item in the books array
     render() {
-        return(
-           
+        return (
             <div className="readContainer">
-            
                  <DBBookTile books={this.state.books}/>              
-                 <div className="addBook" ><Link to="/dbaddbook" className="linkTxt">Add book</Link></div>
-                 
-         </div>
+                 <div className="addBook" ><Link to="/dbaddbook" className="linkTxt">Add book</Link></div>    
+            </div>
         )
     }
 }
