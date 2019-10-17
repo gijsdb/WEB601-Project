@@ -1,4 +1,4 @@
-// Check ID for integer
+// Check ID for integer, if ID is not integer display an error
 function checkID(req, res, next) {
     // Set id from request to var id
     const id = +req.params.id

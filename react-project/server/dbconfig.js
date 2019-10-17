@@ -1,5 +1,7 @@
+// Specifies the servers port
 const APIServerPort = 4200
 
+// Sets the configuration for the database
 const database = {
     host: 'localhost',
     port: 3306,

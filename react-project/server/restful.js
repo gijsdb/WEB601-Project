@@ -9,7 +9,7 @@ const middlewares = require('./middlewares')
 const bodyParser = require('body-parser')
 
 
-/*Now we can make our payload as json format so it can be understood*/
+/* Allows for conversion of payload to JSON format */
 const jsonParser = bodyParser.json() 
 
 // knex connection to mysql db
@@ -24,7 +24,7 @@ app.locals.knex = knex
 // Using routes
 const routes = require('./routes')
 
-// For each request, a function from  bookKnex handles the request
+// For each request to the API, a function from  bookKnex handles each request
 router.get('/books', routes.bookList.listAllBooksKnex);
 
 router.get('/books/:id', middlewares.checkID, routes.bookList.listSingleBook);
@@ -36,12 +36,10 @@ router.patch('/books/:id', jsonParser, middlewares.checkID, routes.bookList.upda
 router.delete('/books/:id', middlewares.checkID, routes.bookList.deleteBook)
 
 
-// Add api to the url
+// Add /api to the url as well as cors and router
 app.use('/api', cors(), router);
 
-
-
-
+// Confirms server started in console
 app.listen(config.APIServerPort, () => {
     console.log(`Server started on port ${config.APIServerPort}`);
 });

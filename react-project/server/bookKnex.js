@@ -1,12 +1,13 @@
-// Lists all the books
+// Lists all the books from the database
 function listAllBooksKnex(req, res) {
     const {
         knex
     } = req.app.locals
     knex
+        // DB Query retrieving the ID, title, author and dateread from the table books
         .select('ID','Title', 'Author', 'DateRead')
         .from('tblBooks')
-       
+        // Either returns success (200) or error (500)
         .then(data => res.status(200).json(data))
         .catch(error => res.status(500).json(error))
 }
@@ -21,7 +22,7 @@ function listSingleBook(req, res) {
         id
     } = req.params
     knex
-        // DB Query
+        // DB Query retrieving the ID, title, author and dateread from the table books where the ID matches.
         .select('ID','Title', 'Author', 'DateRead')
         .from('tblBooks')
         .where({
@@ -31,8 +32,10 @@ function listSingleBook(req, res) {
         // Response
         .then(data => {
             if (data.length > 0) {
+                // Returns successful (200)
                 return res.status(200).json(data)
             } else {
+                // Returns error (404) with an message
                 return res.status(404).json(`Book with ID ${id} does not exist`);
             }
         })
@@ -45,11 +48,11 @@ function postBook(req, res) {
         knex
     } = req.app.locals
     const payload = req.body
-    // Parsing payload
+    // Currently only Title and Author are the mandatory collumns
     const mandatoryColumns = ['Title','Author']
     const payloadKeys = Object.keys(payload)
     const mandatoryColumnsExists = mandatoryColumns.every(mc => payloadKeys.includes(mc))
-    // Checking if MC is filled then posts
+    // Checking if MC are present then posts data to the database.
     if (mandatoryColumnsExists) {
         knex('tblBooks')
             .insert(payload)
@@ -57,11 +60,12 @@ function postBook(req, res) {
             .catch(error => res.status(500).json(error))
 
     } else {
+        // Displays an error if collumns have not been filled out.
         return res.status(400).json(`Mandatory Columns are required ${mandatoryColumns}`);
     }
 }
 
-// Updating a book by id
+// Updating a book by id --> Currently not included in the app
 function updateBook(req, res) {
     const {
         knex
@@ -91,6 +95,7 @@ function deleteBook(req, res) {
     const {
         id
     } = req.params
+    // Deletetes the book where the ID matches the passed parameter ID
     knex('tblBooks')
         .where('id', id)
         .del()
