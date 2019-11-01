@@ -1,10 +1,50 @@
 .dbLandingContainer {
-    margin: 0;
-    padding-top: 5em;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 1em;
+
+}
+
+header {
+  text-align: center;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.dbLandingSquares {
+    padding-top: 1em;
     text-align: center;
-    color: #af0606;
+}
+
+.dbLandingSquares > ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1em;
+}
+
+.featureItems {
+    padding: 0;
+}
+
+.featureItems > li {
+    list-style: none;
+    
+}
+
+
+
+/*
+.dbLandingContainer {
+    margin: 0;
+    text-align: center;
+    color: #1E1E23;
     font-family: 'Be Vietnam', sans-serif;
     display: grid;
+    width: 90%;
+    margin-left: 5%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: 
@@ -39,7 +79,6 @@ section:nth-of-type(3) {
 @media only screen and (min-width: 768) {
     .dbLandingContainer {
         margin: 0;
-        padding-top: 4em;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -50,3 +89,4 @@ section:nth-of-type(3) {
             "contentCol3"
     }
 }
+*/

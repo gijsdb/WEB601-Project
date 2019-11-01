@@ -1,60 +1,19 @@
 .dbBookContainer {
-    margin: 0;
-    padding-top: 4em;
+ width: 80vw;
+ margin-left: 10vw;
+}
+
+.bookHeader {
+    width: 100%;
     text-align: center;
-    color: grey;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-        "header header"
-        "contentCol1 contentCol2"
-        "noteList noteList"
-}
-
-section:nth-of-type(1) {
-    grid-area: contentCol1;
-
-}
-
-section:nth-of-type(2) {
-    grid-area: contentCol2;   
-}
-
-    .btnBookNewNote {
-        background-color:transparent;
-        -moz-border-radius:4px;
-        -webkit-border-radius:4px;
-        border-radius:4px;
-        border:1px solid #ffa114;
-        display:inline-block;
-        cursor:pointer;
-        color:#ffa114;
-        font-family:Arial;
-        font-size:19px;
-        font-weight:bold;
-        padding:6px 12px;
-        text-decoration:none;
-        transition: 0.3s;
-    }
-    .btnBookNewNote:hover {
-        background-color: #ffa114;
-        color: #fff;
-    }
-    .btnBookNewNote:active {
-        position:relative;
-        top:1px;
-    }
-
-.bookActionList li {
-    margin: 1em 0em;
 }
 
 .noteList {
-    grid-area: noteList;
+    text-align: center;
+    padding-top: 1em;
 }
 .noteList ul {
     list-style: none;
-    font-size: 2em;
-    
+    font-size: 1.5em;
+    padding: 0;
 }

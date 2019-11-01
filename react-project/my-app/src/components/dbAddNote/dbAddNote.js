@@ -11,14 +11,14 @@ export default class DBAddNote extends React.Component {
     render() {
         return(
             <div className="addNoteContainer">
-                <header>
+                <div className="bookHeader">
                     <h1>Add a new note</h1>
-                    <Link to="/dbreadbooks" className="btnBookNewNote">Back</Link>
-                </header>
+                    <Link to="/dbreadbooks" className="btn">Back</Link>
+                </div>
                 <div className="textEditorContainer">
                     <MyEditor></MyEditor>
                 </div>
-                <button className="btnBookNewNote">Add note</button>
+                <button className="btn">Add note</button>
             </div>
         )
     }

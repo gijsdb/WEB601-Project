@@ -13,6 +13,43 @@ export default class DBLanding extends React.Component {
 
     render() {
         return(
+
+            <div>
+                <div className="dbLandingContainer">
+                    <header>
+                        <h1>Welcome to your dashboard {this.userName}</h1>
+                    </header>
+                    <section className="dbLandingSquares">
+                        <ul>
+                            <li>
+                                <h2>Quick navigation</h2>
+                                <ul className="featureItems">
+                                    <li>- Read books</li>
+                                    <li>- Add books</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <h2>Features</h2>
+                                <ul className="featureItems">
+                                    <li>- Catalog your books</li>
+                                    <li>- Create, save and edit notes</li>
+                                </ul>
+                            </li>
+                            <li>
+                            <h2>Recent notes</h2>
+                            <ul className="featureItems">
+                                <li>- note 1</li>
+                                <li>- note 2</li>
+                                <li>- note 3</li>
+                                <li>- note 4</li>
+                            </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+
+            /*
             <div>
                 <div className="dbLandingContainer">
                     <header>
@@ -43,6 +80,7 @@ export default class DBLanding extends React.Component {
                     </section>
                 </div>
         </div>
+        */
         )
     }
 }

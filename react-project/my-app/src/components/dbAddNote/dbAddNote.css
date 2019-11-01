@@ -1,20 +1,13 @@
 .addNoteContainer {
-    margin: 0;
-    padding-top: 4em;
-    text-align: center;
-    color: grey;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-        "header"
-        "content"
+width: 80vw;
+margin-left: 10vw;
 }
 
 .textEditorContainer {
-    grid-area: content;
     background-color: lightgrey;
-    color: #fff;
-    height: 50vh;
+    border-radius: 15px;
+    color: #1E1E23;
     width: 80vw;
-    margin-left: 10vw;
+    padding: 1em;
+    margin: 1em 0 1em 0;
 }

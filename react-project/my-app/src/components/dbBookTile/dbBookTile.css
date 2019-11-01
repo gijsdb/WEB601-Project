@@ -1,25 +1,25 @@
 .module {
-  background-color: #AF0506;
-  color: #fff;
+  border:2px solid green;
+  color: #1E1E23;
   border-radius: 5px;
-  width: 100%;
-  margin: 1em;
   padding-bottom: 1.5em;
   font-family: 'Be Vietnam', sans-serif;
   font-size: 10px;
+  margin-bottom: 1em;
 }
 
 .readBookGrid {
   margin-top: 1em;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 50px;
   text-align: center;
 }
   
 @media only screen and (max-width: 750px) {
   .readBookGrid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
   }
 }
   

@@ -1,4 +1,5 @@
 import React from 'react';
+import './textEditor.css'
 import {Editor, EditorState, RichUtils} from 'draft-js';
 
 // The component which holds the text editor through which users can add notes on specific books
@@ -23,9 +24,11 @@ export default class MyEditor extends React.Component {
   render() {
     return (
         <div>
+          <div className="txtEditBtnContainer">
             <button onClick={this._onBoldClick.bind(this)}>Bold</button>
             <button onClick={this._onItalicClick.bind(this)}>Italic</button>
             <button onClick={this._onUnderlineClick.bind(this)}>Underline</button>
+          </div>
             <Editor editorState={this.state.editorState} onChange={this.onChange} />
         </div>
     );

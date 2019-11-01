@@ -16,7 +16,7 @@ export default class DBAddBook extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
-      // Handles the submission of the add book form and adds it to the database
+    // Handles the submission of the add book form and adds it to the database
     handleSubmit(event) {
         event.preventDefault();
         fetch('http://localhost:4200/api/books', {
@@ -27,7 +27,7 @@ export default class DBAddBook extends React.Component {
              "Author": this.author.value,
              "DateRead": this.date.value,
             })});
-        console.log("Book added");
+        alert("Book added");
     }
 
         /* OLD CODE
@@ -40,6 +40,15 @@ export default class DBAddBook extends React.Component {
         //console.log(lcTitle + lcAuthor + lcDate + lcFile)
         */
      
+
+    /* 
+        FORM DOES NOT CONTAIN INPUT VALIDATION 
+        Title = String 
+        Author = String
+        Date = Date
+        File = Not required at the moment but meant to be the books cover
+    */
+
     render() {
 
         function dataHandle() {
@@ -50,27 +59,29 @@ export default class DBAddBook extends React.Component {
             <div className="addBookContainer">
                 <header>
                     <h1>Add a new book</h1>
-                    <Link to="/dbreadbooks" className="btnBookNewNote">Back</Link>
+                    
                 </header>
+                
                 <div className='bookInput'>
                     <form onSubmit={this.handleSubmit}>
                     <label>
-                        Title:
+                        <p>Title:</p>
                         <input ref={(ref) => {this.title = ref}} type="text" id="title" name="title" autocomplete="off"/>
                     </label><br></br>
                     <label>
-                        Author:
+                        <p>Author:</p>
                         <input ref={(ref) => {this.author = ref}} type="text" id="author" name="author" autocomplete="off"/>
                     </label><br></br>
                     <label>
-                        Date read:
+                        <p>Date read:</p>
                         <input ref={(ref) => {this.date = ref}} type="date" id="date" name="date" autocomplete="off"/>
                     </label><br></br>
                     <label>
-                        Book cover:
+                        <p>Book cover:</p>
                         <input ref={(ref) => {this.file = ref}} type="file" id="file" name="file" autocomplete="off"/>
                     </label><br></br>
-                    <input type="submit" id="Submit"/>
+                    <input type="submit" className="btn" id="Submit"/>
+                    <Link to="/dbreadbooks" className="btn">Back</Link>
                     </form>
                 </div>
             </div>

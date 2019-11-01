@@ -1,14 +1,7 @@
 .noteContainer {
-    margin: 0;
-    padding-top: 4em;
-    text-align: center;
-    color: grey;
-    display: grid;
-    grid-template-columns: 1fr;
-
-    grid-template-areas: 
-        "header"
-        "content"
+    padding-top: 1em;
+    width: 80vw;
+    margin-left: 10vw;
 }
 
 

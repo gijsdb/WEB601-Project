@@ -17,7 +17,6 @@ export default class DBReadBooks extends React.Component {
 		   })
 	}
 
-
     // Retrieves all the books from the database and saves them in the array books
     GetUserBooks() {
         fetch('http://localhost:4200/api/books')
@@ -39,17 +38,22 @@ export default class DBReadBooks extends React.Component {
         })	
     }
 
+  
+  
+
     // When the component has mounted, the books will be retrieved
     componentDidMount() {
         this.GetUserBooks();
-	}
+    }
+    
 
     // One DBBookTile is created for each item in the books array
     render() {
         return (
             <div className="readContainer">
+                <h1>Books you've read</h1>
                  <DBBookTile books={this.state.books}/>              
-                 <div className="addBook" ><Link to="/dbaddbook" className="linkTxt">Add book</Link></div>    
+                <Link to="/dbaddbook" className="btn">Add book</Link>  
             </div>
         )
     }

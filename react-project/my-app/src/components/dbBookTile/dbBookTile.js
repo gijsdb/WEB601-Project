@@ -25,6 +25,11 @@ export default class DBBookTile extends React.Component {
         window.location.reload();
     }
 
+
+    componentDidMount() {
+   
+    }
+
     // Maps out each book in the array books and displays a tile for it
     render() {
         return(
@@ -37,7 +42,7 @@ export default class DBBookTile extends React.Component {
                     <h3>{book.Author}</h3>
                     <h2><u>Date read</u></h2>
                     <h3>{book.DateRead}</h3>
-                    <button onClick={this.deleteBook.bind(this,book.ID)}>Delete</button>
+                    <button className="btn" onClick={this.deleteBook.bind(this,book.ID)}>Delete</button>
                 </div>
             ))}
             </div>

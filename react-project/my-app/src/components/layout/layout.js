@@ -1,5 +1,4 @@
 import React from 'react'
-import './layout.css';
 import DBNavigation from '../dbNavigation/dbNavigation';
 
 // This component ensures that the dashboard navigation is present on all dashboard pages at the top of the page
