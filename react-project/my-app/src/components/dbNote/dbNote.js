@@ -73,7 +73,7 @@ export default class DBNote extends React.Component {
             <div className="noteContainer">
                 <div className="bookHeader">
                     <h1>{this.state.note.Title}</h1>
-                <Link className="btn" to={`/dbbook/${this.state.note.BookID}`}>Back</Link>;
+                <Link className="btn" to={`/dbbook/${this.state.note.BookID}`}>Back</Link>
                 </div>
                 <div className="noteContent">
                     <p>

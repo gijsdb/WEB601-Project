@@ -27,28 +27,25 @@ export default class MyEditor extends React.Component {
             method: 'post',
             headers: {'Content-Type':'application/json'},
             body: JSON.stringify({
-             "Title": "",
+             "Title": this.title.value,
              "Content": convertedData.blocks[0].text,
              "BookID": bookID
             })});
         alert("Note added");
         
     this.setState({editorState: EditorState.createEmpty()})
+    this.title.value = "";
   }
 
   render() {
 
     return (
         <div>
-          {/* 
-          <div className="txtEditBtnContainer">
-            <button onClick={this._onBoldClick.bind(this)}>Bold</button>
-            <button onClick={this._onItalicClick.bind(this)}>Italic</button>
-            <button onClick={this._onUnderlineClick.bind(this)}>Underline</button>
-          </div>
-          */}
-            {//<Editor editorState={this.state.editorState}  handleKeyCommand={this.handleKeyCommand} onChange={this.onChange} />
-            }
+            <label>
+              <p>Title:</p>
+              <input className="titleInput" ref={(ref) => {this.title = ref}} type="text" id="title" name="title" autocomplete="off"/>
+            </label><br></br>
+           
             <Editor editorState={this.state.editorState}  wrapperClassName="demo-wrapper" editorClassName="editer-content" onEditorStateChange={this.onChange} />
             <button onClick={this.handleSubmit} className="btn">Add note</button>
         </div>

@@ -6,22 +6,9 @@
     margin-bottom: 1em;
 }
 
-.txtEditBtnContainer button {
-    background-color:transparent;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    border-radius:4px;
-    border:1px solid black;
-    display:inline-block;
-    cursor:pointer;
-    color: black;
-    font-family:Arial;
-    font-size:19px;
-    font-weight:bold;
-    padding:6px 12px;
-    text-decoration:none;
-    transition: 0.3s;
-    margin: 0.25em
+.titleInput {
+    background: #fff;
+    width: 90%;
 }
 
 .txtEditInput {
