@@ -31,10 +31,20 @@ router.get('/books/:id', middlewares.checkID, routes.bookList.listSingleBook);
 
 router.post('/books', jsonParser, routes.bookList.postBook);
 
-router.patch('/books/:id', jsonParser, middlewares.checkID, routes.bookList.updateBook)
+router.patch('/books/:id', jsonParser, middlewares.checkID, routes.bookList.updateBook);
 
-router.delete('/books/:id', middlewares.checkID, routes.bookList.deleteBook)
+router.delete('/books/:id', middlewares.checkID, routes.bookList.deleteBook);
 
+router.get('/notes', routes.noteList.listAllNotesKnex);
+
+router.post('/notes', jsonParser, routes.noteList.postNote);
+
+
+router.get('/notes/:id', middlewares.checkID, routes.noteList.listSingleNoteKnex2);
+
+router.get('/notesbybookid/:id', middlewares.checkID, routes.noteList.listSingleNoteKnex);
+
+router.delete('/notes/:id', middlewares.checkID, routes.noteList.deleteNote);
 
 // Add /api to the url as well as cors and router
 app.use('/api', cors(), router);
