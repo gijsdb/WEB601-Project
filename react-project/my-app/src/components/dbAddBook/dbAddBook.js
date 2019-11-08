@@ -30,25 +30,6 @@ export default class DBAddBook extends React.Component {
         alert("Book added");
     }
 
-        /* OLD CODE
-        const lcTitle = document.getElementById('title').value;
-        const lcAuthor = document.getElementById('author').value;
-        const lcDate = document.getElementById('date').value;
-        const lcFile = document.getElementById('file').value;
-        bookArray.push(new Book(lcTitle, lcAuthor, lcDate, lcFile))
-        console.log(bookArray);
-        //console.log(lcTitle + lcAuthor + lcDate + lcFile)
-        */
-     
-
-    /* 
-        FORM DOES NOT CONTAIN INPUT VALIDATION 
-        Title = String 
-        Author = String
-        Date = Date
-        File = Not required at the moment but meant to be the books cover
-    */
-
     render() {
 
         function dataHandle() {

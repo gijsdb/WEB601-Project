@@ -36,12 +36,13 @@ export default class DBBookTile extends React.Component {
             <div className="readBookGrid">
               {this.props.books.map((book) => (
                 <div key={book.ID} className="module">
-                    <h2><u>Title</u></h2>
-                    <h3>{book.Title}</h3>
+                    <h2><u>Title</u> </h2>
+                    <h3><Link to={`/dbbook/${book.ID}`}>{book.Title}</Link></h3>
                     <h2><u>Author</u></h2>
                     <h3>{book.Author}</h3>
                     <h2><u>Date read</u></h2>
                     <h3>{book.DateRead}</h3>
+                   
                     <button className="btn" onClick={this.deleteBook.bind(this,book.ID)}>Delete</button>
                 </div>
             ))}

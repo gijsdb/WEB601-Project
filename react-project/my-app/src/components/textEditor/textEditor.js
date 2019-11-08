@@ -1,6 +1,8 @@
 import React from 'react';
 import './textEditor.css'
-import {Editor, EditorState, RichUtils} from 'draft-js';
+import { EditorState, convertFromRaw, convertToRaw } from 'draft-js';
+import { Editor} from 'react-draft-wysiwyg';
+import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 
 // The component which holds the text editor through which users can add notes on specific books
 // The text editor I have used is draft-js
@@ -9,27 +11,46 @@ import {Editor, EditorState, RichUtils} from 'draft-js';
 export default class MyEditor extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {editorState: EditorState.createEmpty()};
+    this.state = {
+      editorState: EditorState.createEmpty(),
+      book: this.props.bookObject
+    };
     this.onChange = (editorState) => this.setState({editorState});
   }
-  _onBoldClick() {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'BOLD'));
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    var convertedData = convertToRaw(this.state.editorState.getCurrentContent())
+    console.log(convertedData);
+    var bookID = this.state.book.ID
+    fetch('http://localhost:4200/api/notes', {
+            method: 'post',
+            headers: {'Content-Type':'application/json'},
+            body: JSON.stringify({
+             "Title": "",
+             "Content": convertedData.blocks[0].text,
+             "BookID": bookID
+            })});
+        alert("Note added");
+        
+    this.setState({editorState: EditorState.createEmpty()})
   }
-  _onItalicClick() {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'ITALIC'));
-  }
-  _onUnderlineClick() {
-    this.onChange(RichUtils.toggleInlineStyle(this.state.editorState, 'UNDERLINE'));
-  }
+
   render() {
+
     return (
         <div>
+          {/* 
           <div className="txtEditBtnContainer">
             <button onClick={this._onBoldClick.bind(this)}>Bold</button>
             <button onClick={this._onItalicClick.bind(this)}>Italic</button>
             <button onClick={this._onUnderlineClick.bind(this)}>Underline</button>
           </div>
-            <Editor editorState={this.state.editorState} onChange={this.onChange} />
+          */}
+            {//<Editor editorState={this.state.editorState}  handleKeyCommand={this.handleKeyCommand} onChange={this.onChange} />
+            }
+            <Editor editorState={this.state.editorState}  wrapperClassName="demo-wrapper" editorClassName="editer-content" onEditorStateChange={this.onChange} />
+            <button onClick={this.handleSubmit} className="btn">Add note</button>
         </div>
     );
   }

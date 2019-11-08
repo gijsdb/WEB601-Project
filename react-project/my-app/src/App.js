@@ -28,10 +28,10 @@ function App() {
                   <Route path='/dblanding' component={DBLanding} /> 
                   <Route path='/dbreadbooks' component={DBReadBooks} />
                   <Route path='/dbaddbook' component={DBAddBook} />
-                  <Route path='/dbbook' component={DBBook} />
-                  <Route path='/dbnote' component={DBNote} />
-                  <Route path='/dbaddnote' component={DBAddNote} />
-                  <Route path='*' component={DB404} status={404} />
+                  <Route path='/dbbook/:id' component={DBBook} />
+                  <Route path='/dbnote/:id' component={DBNote} />
+                  <Route path='/dbaddnote' component={DBAddNote} />  
+                  <Route component={DB404} status={404} />    
               </Switch>
         </Layout> 
       </BrowserRouter>
