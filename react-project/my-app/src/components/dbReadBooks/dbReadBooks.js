@@ -1,12 +1,12 @@
-import React from 'react'
+import React from 'react';
 import './dbReadBooks.css';
-import { Link } from 'react-router-dom'
-import DBBookTile from '../dbBookTile/dbBookTile'
+import { Link } from 'react-router-dom';
+import DBBookTile from '../dbBookTile/dbBookTile';
+
 
 // The heart of my application where the users read books are displayed as tiles
 // Uses the RESTful API to retrieve all the books from the database and adds them to the books array which is held in the state
 
-//const myBooks = [];
 export default class DBReadBooks extends React.Component {
    
     constructor(props) {
@@ -38,15 +38,11 @@ export default class DBReadBooks extends React.Component {
         })	
     }
 
-  
-  
-
     // When the component has mounted, the books will be retrieved
     componentDidMount() {
         this.GetUserBooks();
     }
     
-
     // One DBBookTile is created for each item in the books array
     render() {
         return (

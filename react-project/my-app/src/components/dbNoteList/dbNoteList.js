@@ -11,7 +11,6 @@ export default class DBNoteList extends React.Component {
     constructor(props) {
         super(props);
         this.deleteNote = this.deleteNote.bind(this)
-  
     }
 
     

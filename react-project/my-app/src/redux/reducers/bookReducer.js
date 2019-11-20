@@ -8,18 +8,16 @@ const initialState = {
 export const bookReducer = (listOfBooks=[] , action) => {
     
   
-  if(action.type === ADD_BOOK) {
-      
+  if (action.type === ADD_BOOK) {
+
       return [...listOfBooks, action.payload]
 
   } else if (action.type === DEL_BOOK) {
-
-    return listOfBooks.filter(name => name !== action.payload.name)   
-
+    console.log("Reached reducer")
+    return listOfBooks.filter(name => name !== action.payload.name)
   }
-
+    
     return listOfBooks
-  
   }
 
   export default bookReducer;

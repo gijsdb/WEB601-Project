@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
+import { addBook } from '../../redux/actions/index'
 import './dbAddBook.css';
 
 
@@ -9,7 +11,7 @@ import './dbAddBook.css';
 
 var bookArray = [];
 
-export default class DBAddBook extends React.Component {
+class DBAddBook extends React.Component {
     
     constructor() {
         super();
@@ -47,19 +49,19 @@ export default class DBAddBook extends React.Component {
                     <form onSubmit={this.handleSubmit}>
                     <label>
                         <p>Title:</p>
-                        <input ref={(ref) => {this.title = ref}} type="text" id="title" name="title" autocomplete="off"/>
+                        <input ref={(ref) => {this.title = ref}} type="text" id="title" name="title" autoComplete="off"/>
                     </label><br></br>
                     <label>
                         <p>Author:</p>
-                        <input ref={(ref) => {this.author = ref}} type="text" id="author" name="author" autocomplete="off"/>
+                        <input ref={(ref) => {this.author = ref}} type="text" id="author" name="author" autoComplete="off"/>
                     </label><br></br>
                     <label>
                         <p>Date read:</p>
-                        <input ref={(ref) => {this.date = ref}} type="date" id="date" name="date" autocomplete="off"/>
+                        <input ref={(ref) => {this.date = ref}} type="date" id="date" name="date" autoComplete="off"/>
                     </label><br></br>
                     <label>
                         <p>Book cover:</p>
-                        <input ref={(ref) => {this.file = ref}} type="file" id="file" name="file" autocomplete="off"/>
+                        <input ref={(ref) => {this.file = ref}} type="file" id="file" name="file" autoComplete="off"/>
                     </label><br></br>
                     <input type="submit" className="btn" id="Submit"/>
                     <Link to="/dbreadbooks" className="btn">Back</Link>
@@ -69,4 +71,14 @@ export default class DBAddBook extends React.Component {
         )
     }
 }
+
+// testing redux
+const mapStateToProps = (state) => {
+    console.log(state)
+    return {books : state.books}
+}
+
+export default connect(mapStateToProps, {
+    addBook
+})(DBAddBook)
 
