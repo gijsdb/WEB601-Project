@@ -24,7 +24,7 @@ app.locals.knex = knex
 // Using routes
 const routes = require('./routes')
 
-// For each request to the API, a function from  bookKnex handles each request
+// For each request to the API, a function from  bookKnex or noteKnex handles each request
 router.get('/books', routes.bookList.listAllBooksKnex);
 
 router.get('/books/:id', middlewares.checkID, routes.bookList.listSingleBook);
@@ -38,7 +38,6 @@ router.delete('/books/:id', middlewares.checkID, routes.bookList.deleteBook);
 router.get('/notes', routes.noteList.listAllNotesKnex);
 
 router.post('/notes', jsonParser, routes.noteList.postNote);
-
 
 router.get('/notes/:id', middlewares.checkID, routes.noteList.listSingleNoteKnex2);
 

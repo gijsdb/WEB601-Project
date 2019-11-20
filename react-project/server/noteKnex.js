@@ -1,3 +1,4 @@
+// Retrieve all notes from the database
 function listAllNotesKnex(req, res) {
     const {
         knex
@@ -11,6 +12,7 @@ function listAllNotesKnex(req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+// List one note where the BookID matches
 function listSingleNoteKnex (req, res) {
     const {
         knex
@@ -35,6 +37,7 @@ function listSingleNoteKnex (req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+// List one note where the Note ID matches
 function listSingleNoteKnex2 (req, res) {
     const {
         knex
@@ -59,6 +62,7 @@ function listSingleNoteKnex2 (req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+// Delete a note based on the ID
 function deleteNote(req, res) {
     const {
         knex
@@ -80,6 +84,7 @@ function deleteNote(req, res) {
         .catch(error => res.status(500).json(error))
 }
 
+// Add a note to the database
 function postNote(req, res) {
     const {
         knex
