@@ -1,6 +1,8 @@
-import { createStore, combineReducers } from "redux";
-import bookReducer from "../reducers/bookReducer";
+import { applyMiddleware,createStore, combineReducers } from "redux";
+//import bookReducer from "../reducers/bookReducer";
 import noteReducer from "../reducers/noteReducer";
+import bookReducer from "../reducers/bookReducerNew";
+import thunk from 'redux-thunk';
 
 
 const allReducers = combineReducers({
@@ -8,6 +10,8 @@ const allReducers = combineReducers({
     noteReducer: noteReducer
 })
 
-const store = createStore(allReducers);
+const middlewares = [thunk];
+
+const store = createStore(allReducers, applyMiddleware(...middlewares));
 
 export default store;
